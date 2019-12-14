@@ -1,0 +1,18 @@
+{
+    "name": "murillo/microframework",
+    "description": "Micro Framework MVC Web2",
+    "license": "MIT",
+    "type": "project",
+    "authors": [
+        {"name": "Murillo Godoi", "email": "murillogodoi13@hotmail.com"}
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Core\\": "core/init/"
+        }
+    },
+    "require": {
+        "php": ">=7.0"
+    }
+}
