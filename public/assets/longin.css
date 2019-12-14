@@ -1,0 +1,463 @@
+/* 
+/* Specific styles of signin component */
+/*
+* General styles
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Michroma|Source+Code+Pro&display=swap');
+
+body, html {
+	color: #fff;
+	font-size: 10px;
+	/* font-size: 10px; */
+	font-family: verdana;
+	background-color: red;
+	width: 100%;
+	/* background-image: linear-gradient(rgb(196, 196, 196), rgb(221, 221, 221));  */
+}
+
+/*
+* Tables
+*/
+.checkbox{
+	color: #000;
+	
+}
+.row{
+	padding:2px;
+	margin: 1;
+	width:99%;
+	background-color: #111;
+
+}
+
+table {
+	vertical-align: top;
+	width: 100%; 
+	table-layout: fixed;
+	margin-top: 5px;
+	max-height: 430px;
+    overflow-y: scroll;
+	/* border: 1px solid; */
+}
+
+.table {
+	vertical-align: top;
+	width: 100%; 
+	table-layout: fixed;
+	margin-top: 5px;
+	min-height: 200px;
+	max-height: 430px;
+    overflow-y: scroll;
+	/* border: 1px solid;	 */
+}
+
+
+th {
+    font-family: 'verdana', sans-serif;
+	font-size: 12px;
+	vertical-align: top;
+    table-layout: fixed;
+    padding: 10px;
+    background-color: #01A185;
+}
+
+td {
+    font-family: 'verdana', sans-serif;
+	font-size: 10px;
+	vertical-align: top;
+	width: 33%;
+}
+
+.col-md-4{ 
+	bottom: 0;
+	/* max-height: 470px; */
+	/* overflow: hidden; */
+	overflow: auto;
+	padding: 8px;
+	min-height: 300px;
+
+}
+.table2{ 
+	min-height: 500px;
+	overflow: auto;
+    padding: 5px;
+
+}
+/*
+* Bootstrap
+*/
+
+.bg-orange{ 
+	background-color: var(--orange);
+	font-weight: bold;
+}
+
+.card-container.card {
+	max-width: 350px;
+	padding: 40px 40px;
+}
+
+.btn {
+	font-weight: 700;
+	height: 36px;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	cursor: default;
+	user-select: none;
+}
+
+/*
+ * Card component
+ */
+.card {
+    background-color: #F7F7F7;
+    /* just in case there no content*/
+    padding: 20px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 50px;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+/*
+* Card component
+*/
+.card-top {
+	margin-top: 15px;
+	min-width: 140px;
+	height: 80px;	
+
+}
+.card-body {
+	padding: 0.5rem;
+}
+
+.text-value {
+	font-family: Candal; 
+	font-size: 25px;
+}
+.clock {
+	font-size: 1em;	
+}
+
+
+.profile-img-card {
+	width: 178px;	
+	height: 47px;
+	margin: 0 auto 10px;
+	display: block;
+}
+
+/*
+* Form styles
+*/
+.profile-name-card {
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	margin: 10px 0 0;
+	min-height: 1em;
+}
+
+.reauth-email {
+	display: block;
+	color: #404040;
+	line-height: 2;
+	margin-bottom: 10px;
+	font-size: 14px;
+	text-align: center;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.form-signin #inputEmail,
+.form-signin #inputPassword {
+	direction: ltr;
+	height: 44px;
+	font-size: 16px;
+}
+
+.form-signin input[type=email],
+.form-signin input[type=password],
+.form-signin input[type=text],
+.form-signin button {
+	width: 100%;
+	display: block;
+	margin-bottom: 10px;
+	z-index: 1;
+	position: relative;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.form-signin .form-control:focus {
+	border-color: rgb(104, 145, 162);
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+}
+
+.btn.btn-signin {
+	/*background-color: #4d90fe; */
+	background-color: rgb(104, 145, 162);
+	/* background-color: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
+	padding: 0px;
+	font-weight: 700;
+	font-size: 14px;
+	height: 36px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	border: none;
+	-o-transition: all 0.218s;
+	-moz-transition: all 0.218s;
+	-webkit-transition: all 0.218s;
+	transition: all 0.218s;
+}
+
+.btn.btn-signin:hover,
+.btn.btn-signin:active,
+.btn.btn-signin:focus {
+	background-color: rgb(12, 97, 33);
+}
+
+.forgot-password {
+	color: rgb(104, 145, 162);
+}
+
+.forgot-password:hover,
+.forgot-password:active,
+.forgot-password:focus{
+	color: rgb(12, 97, 33);
+}
+
+
+.countdown { 
+	font-size: 12px;
+	font-style: none;
+	color: #fff;
+}
+
+/*
+* Monitor Pings
+*/
+
+
+.gw {
+	font-weight: bold;
+	font-size: 10px;
+	color: #FFF;
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+.info {
+	font-size: 10px;
+	color: #FFF;
+	text-align: left;
+	font-family:  Verdana, Geneva, sans-serif;
+	padding-left: 5px;
+}
+
+.infoErr {
+	font-size: 10px;
+	color: #ffeea1;
+	text-align: left;
+	font-family:  Verdana, Geneva, sans-serif;
+}
+
+.stOK {
+	font-weight: bold;
+	color: #7FFF00;
+	text-align: right;
+	font-size: 10px;
+	font-family:  Verdana, Geneva, sans-serif;
+}
+
+.stRed {
+	font-weight: bold;
+	color: red;
+	text-decoration: blink;
+	text-align: right;
+	font-size: 10px;
+	font-family:  Verdana, Geneva, sans-serif;
+}
+
+.stWar {
+	font-weight: bold;
+	color: #FF33FF;
+	text-decoration: blink;
+	text-align: right;
+	font-size: 10px;
+	font-family:  Verdana, Geneva, sans-serif;
+}
+
+.stYel {
+	font-weight: bold;
+	color: yellow;
+	text-decoration: blink;
+	text-align: right;
+	font-size: 10px;
+	font-family:  Verdana, Geneva, sans-serif;
+}
+
+/*
+* Filas
+*/
+
+.title {
+	font-size: 12px;
+	color: #FFF;
+	font-family:  Verdana;
+	text-transform: uppercase;
+	text-align: center;
+	background-color: #000;
+	padding: 3px;
+
+}
+
+.text { 
+	font-size: 10px;
+	font-style: none;
+	color: #fff;
+}
+.text2 {
+	font-size: 9px;
+	font-style: normal;
+	color: yellow;
+}
+
+.div1 {
+	float: left;
+	height: auto;
+	width: 100px;
+}
+
+.div2 {
+	float: right;
+	height: auto;
+	width: 100px;
+}
+
+
+/*
+* Alertas
+*/
+
+.bg-danger {
+	color: #fff;
+	font-weight: bold;	
+}
+.bg-warning {
+	color: #000;
+	font-weight: bold;	
+}
+
+
+
+/*
+* nokreak
+*/
+.nbtitle {
+	font-size: 12px;
+	color: #FFF;
+	font-family:  Verdana;
+	/* font-weight: bold; */
+	text-transform: uppercase;
+	text-align: center;
+	background-color: #000;
+	padding: 3px;
+	left:	 30px;
+}
+
+.res { 
+	font-size: 12px;
+	color: #fff;
+}
+.nbtext2 {
+	font-size: 9px;
+	font-style: normal;
+	color: yellow;
+}
+
+
+.nobreak {
+        height: 100%;
+        width: 100%;
+}
+
+
+
+
+ /* .carousel-item {  
+	 border: 5px solid red; 
+} */
+
+.footer {
+    position: fixed;
+	left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #01A185;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+.count {
+    position: fixed;
+	margin-top: 10px;
+    left: 0;
+    bottom: 20px;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    text-align: right;
+}
+
+
+a:link, a:visited {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+h5 {
+  text-align: center;
+}
+
+.blog .carousel-indicators {
+	left: 0;
+	bottom: -30px;
+    padding: 10px;
+
+}
+
+#load2 {
+	position: absolute;
+	top: 150px;
+	left: 40%;
+	z-index: 10000000;
+
+}
+
+nagiosGet: {
+	margin: 0;
+	padding: 0;
+}
