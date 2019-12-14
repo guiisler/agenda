@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<?php
+include_once('signupcontroller.php');
+
+?>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="Guilherme Isler & Murilo Godoi">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+	<title>Agenda 2030	</title>
+
+	
+	<link href="/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+
+	<link href="/assets/css/freelancer.min.css" rel="stylesheet">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	
+	
+
+	<script type="/assets/text/javascript" src="https://code.jquery.com/jquery-1.7.1.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	 <script>
+        function validardataDeNascimento(data){
+
+            dataAtual= new Date();
+
+            data=new Date(data);
+
+            if (data<dataAtual){
+                console.log("Data Válida");
+                return true;
+            } else {
+                console.log("Data Inválida");
+                return false;
+            }
+
+
+        }
+ </script>
+
+
+</head>
+
+</head>
+
+<body id="page-top"> 
+
+  
+  <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="/"><img src="/assets/img/logo_plataforma.png" alt=""  style= height:100px	;"></a>
+      <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item mx-0 mx-lg-1">
+		    <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/">Home</a>
+          </li>
+           
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+ 
+
+<form method="POST" action="../signupcontroller.php" class="form-horizontal">
+<fieldset>
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Nome Completo</label>  
+  <div class="col-md-2">
+  <input id="textinput" name="name" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Nome Completo</label>  
+  <div class="col-md-2">
+  <input id="textinput" name="name" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Nome Completo</label>  
+  <div class="col-md-2">
+  <input id="textinput" name="name" type="text" placeholder="" class="form-control input-md" required>
+    
+  </div>
+</div>
+
+
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-2">
+			<form role="form">
+				<div class="form-group">
+					 
+					<label for="exampleInputEmail1">
+						E-mail	
+					</label>
+					<input type="email" name="email" placeholder="Teste@teste.com.br" class="form-control" id="InputEmail1" required/>
+				</div>
+				<div class="form-group">
+					 
+					<label for="exampleInputPassword1">
+						Senha
+					</label>
+					<input type="password" class="form-control" placeholder="Senha" id="password" required />
+					<input type="password" name="senha" class="form-control" placeholder="Confirme sua senha" id="confirm_password" required>
+				</div>
+				
+	</div>
+</div>
+
+
+
+  </div>
+</div>
+</div>
+</div>
+
+
+ 
+ 
+
+<form class="form-horizontal">
+<fieldset>
+
+
+
+</fieldset>
+</form>
+
+
+
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="singlebutton"></label>
+  <div class="col-md-4">
+    <button id="singlebutton" type="submit" name="singlebutton" class="btn btn-info">Enviar</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+<
+  <section class="copyright py-4 text-center text-white">
+    <div class="container">
+      <small>Orgulhosamente desenvolvido por Murilo Godói e Guilherme Isler</small>
+    </div>
+  </section>
+  
+
+
+
+
+  <div class="scroll-to-top d-lg-none position-fixed ">
+    <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+      <i class="fa fa-chevron-up"></i>
+    </a>
+  </div>
+
+  
+
+ 
+
+ 
+  <script src="/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  
+  <script src="/assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <script src="/assets/js/jqBootstrapValidation.js"></script>
+  <script src="/assets/js/contact_me.js"></script>
+
+ 
+  <script src="/assets/js/freelancer.min.js"></script>
+   <script src="/assets/confirm.js"></script>
+
+</body>
+
+</html>

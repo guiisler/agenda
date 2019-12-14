@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<title>Agenda 2030	</title>
+
+
+	<link href="/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+	
+	<link href="/assets/css/freelancer.min.css" rel="stylesheet">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	
+	
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<script type="text/javascript">	
+	
+	function is_cpf (c) {
+
+  if((c = c.replace(/[^\d]/g,"")).length != 11)
+    return false
+
+  if (c == "00000000000")
+    return false;
+
+  var r;
+  var s = 0;
+
+  for (i=1; i<=9; i++)
+    s = s + parseInt(c[i-1]) * (11 - i);
+
+  r = (s * 10) % 11;
+
+  if ((r == 10) || (r == 11))
+    r = 0;
+
+  if (r != parseInt(c[9]))
+    return false;
+
+  s = 0;
+
+  for (i = 1; i <= 10; i++)
+    s = s + parseInt(c[i-1]) * (12 - i);
+
+  r = (s * 10) % 11;
+
+  if ((r == 10) || (r == 11))
+    r = 0;
+
+  if (r != parseInt(c[10]))
+    return false;
+
+  return true;
+}
+
+
+function fMasc(objeto,mascara) {
+obj=objeto
+masc=mascara
+setTimeout("fMascEx()",1)
+}
+
+  function fMascEx() {
+obj.value=masc(obj.value)
+}
+
+function mCPF(cpf){
+cpf=cpf.replace(/\D/g,"")
+cpf=cpf.replace(/(\d{3})(\d)/,"$1.$2")
+cpf=cpf.replace(/(\d{3})(\d)/,"$1.$2")
+cpf=cpf.replace(/(\d{3})(\d{1,2})$/,"$1-$2")
+return cpf
+}
+
+cpfCheck = function (el) {
+    document.getElementById('cpfResponse').innerHTML = is_cpf(el.value)? '<span style="color:green">válido</span>' : '<span style="color:red">inválido</span>';
+    if(el.value=='') document.getElementById('cpfResponse').innerHTML = '';
+}
+
+function ValidaCPF(){	
+	var RegraValida=document.getElementById("RegraValida").value; 
+	var cpfValido = /^(([0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2})|([0-9]{11}))$/;	 
+	if (cpfValido.test(RegraValida) == true)	{ 
+	console.log("CPF Válido");	
+	} else	{	 
+	console.log("CPF Inválido");	
+	}
+    }
+  function fMasc(objeto,mascara) {
+obj=objeto
+masc=mascara
+setTimeout("fMascEx()",1)
+}
+
+  function fMascEx() {
+obj.value=masc(obj.value)
+}
+
+   function mCPF(cpf){
+cpf=cpf.replace(/\D/g,"")
+cpf=cpf.replace(/(\d{3})(\d)/,"$1.$2")
+cpf=cpf.replace(/(\d{3})(\d)/,"$1.$2")
+cpf=cpf.replace(/(\d{3})(\d{1,2})$/,"$1-$2")
+return cpf
+}
+</script>
+
+	<script type="text/javascript">	
+		
+		$(document).ready(function () {
+		
+			$.getJSON('estados_cidades.json', function (data) {
+				var items = [];
+				var options = '<option value="">escolha um estado</option>';	
+				$.each(data, function (key, val) {
+					options += '<option value="' + val.nome + '">' + val.nome + '</option>';
+				});					
+				$("#estados").html(options);				
+				
+				$("#estados").change(function () {				
+				
+					var options_cidades = '';
+					var str = "";					
+					
+					$("#estados option:selected").each(function () {
+						str += $(this).text();
+					});
+					
+					$.each(data, function (key, val) {
+						if(val.nome == str) {							
+							$.each(val.cidades, function (key_city, val_city) {
+								options_cidades += '<option value="' + val_city + '">' + val_city + '</option>';
+							});							
+						}
+					});
+					$("#cidades").html(options_cidades);
+					
+				}).change();		
+			
+			});
+		
+		});
+		
+	</script>	
+
+</head>
+
+</head>
+
+<body id="page-top"> 
+
+ 
+  <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="home"><img src="/assets/img/logo_plataforma.png" alt=""  style= height:100px	;"></a>
+      <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item mx-0 mx-lg-1">
+		    <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="home">Home</a>
+       
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+ 
+
+<form class="form-horizontal">
+<fieldset>
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Nome Completo</label>  
+  <div class="col-md-2">
+  <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Nome Completo</label>  
+  <div class="col-md-2">
+  <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Nome Completo</label>  
+  <div class="col-md-2">
+  <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Digite o seu CPF</label>  
+  <div class="col-md-2">
+<input id="cpf" type="text" onkeyup="cpfCheck(this)" maxlength="18" onkeydown="javascript: fMasc( this, mCPF );"> <span id="cpfResponse"></span>
+</div>
+</div>
+
+
+<div class="form-group">
+
+  <label class="col-md-4 control-label" for="textinput">E-mail</label>  
+  <div class="col-md-2">
+  <input id="textinput" name="textinput" type="text" placeholder="Digite seu E-mail" class="form-control input-md">
+    
+  </div>
+</div>
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Telefone</label>  
+  <div class="col-md-2">
+  <input id="textinput" name="textinput" type="text" placeholder="Digite seu Número" class="form-control input-md">
+    
+  </div>
+</div>
+
+<div class="form-group">
+
+		<select id="estados">
+
+			<option value="estados"></option>
+
+		</select>
+
+		<select id="cidades">
+			<option value=""></option>
+		</select>
+</div>
+ 
+ 
+
+<form class="form-horizontal">
+<fieldset>
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="radios">Renda Familiar Mensal</label>
+  <div class="col-md-4"> 
+    <label class="radio-inline" for="radios-0">
+      <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
+      Menos de R$1.254
+    </label> <br>
+    <label class="radio-inline" for="radios-1">
+      <input type="radio" name="radios" id="radios-1" value="2">
+      De R$1.255 à R$2.004
+    </label> <br>
+    <label class="radio-inline" for="radios-2">
+      <input type="radio" name="radios" id="radios-2" value="3">
+      De R$2.005 à R$8.640
+    </label><br> 
+    <label class="radio-inline" for="radios-3">
+      <input type="radio" name="radios" id="radios-3" value="4">
+      De R$8.641 à R$11.261
+    </label> <br>
+    <label class="radio-inline" for="radios-4">
+      <input type="radio" name="radios" id="radios-4" value="5">
+      Mais de R$11.262
+    </label><br>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="radios">Possuiu Acesso a Saneamento Básico em Casa?</label>
+  <div class="col-md-4"> 
+    <label class="radio-inline" for="radios-0">
+      <input type="radio" name="radios2" id="radios-0" value="1" checked="checked">
+      Sim
+    </label> 
+    <label class="radio-inline" for="radios-1">
+      <input type="radio" name="radios2" id="radios-1" value="2">
+      Não
+    </label>
+  </div>
+</div>
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="radios">Possui Água Potavel em Casa?</label>
+  <div class="col-md-4"> 
+    <label class="radio-inline" for="radios-0">
+      <input type="radio" name="radios3" id="radios-0" value="1" checked="checked">
+      Sim
+    </label> 
+    <label class="radio-inline" for="radios-1">
+      <input type="radio" name="radios3" id="radios-1" value="2">
+      Não
+    </label>
+  </div>
+</div>
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textarea">Reclamações</label>
+  <div class="col-md-4">                     
+    <textarea class="form-control" id="textarea" placeholder="Relate seus problemas com sua cidade ou Estado." name="textarea"></textarea>
+  </div>
+</div>
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="singlebutton"></label>
+  <div class="col-md-4">
+    <button id="singlebutton" name="singlebutton" class="btn btn-info">Enviar</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+
+  
+
+  <section class="copyright py-4 text-center text-white">
+    <div class="container">
+      <small>Orgulhosamente desenvolvido por Murilo Godói e Guilherme Isler</small>
+    </div>
+  </section>
+
+ 
+  <div class="scroll-to-top d-lg-none position-fixed ">
+    <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+      <i class="fa fa-chevron-up"></i>
+    </a>
+  </div>
+
+  
+
+ 
+
+ 
+  <script src="/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+ 
+  <script src="/assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+
+  <script src="/assets/js/jqBootstrapValidation.js"></script>
+  <script src="/assets/js/contact_me.js"></script>
+
+  <script src="/assets/js/freelancer.min.js"></script>
+
+</body>
+
+</html>

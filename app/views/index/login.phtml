@@ -1,0 +1,49 @@
+<?php
+include('login2.php'); // 
+
+if(isset($_SESSION['login_user'])){
+header("location: home.html");
+}
+?>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Agenda 2030</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/login.css" rel="stylesheet" type="text/css">
+	
+	
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+    <script src="/assets/js/javascript.js"></script> 
+</head>
+<body>
+    <div class="container">
+        <div class="card card-container col-centered">
+            <img id="profile-img" class="profile-img-card" src="/assets/img/logo_plataforma.png" />
+            <p id="profile-name" class="profile-name-card"></p>
+            <form class="form-signin" action="" method="post">
+                <span id="reauth-email" class="reauth-email"></span>
+                <input type="username"  name="username" id="inputEmail" class="form-control" placeholder="Usuario" required autofocus>
+                <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Senha" required>
+                <div id="remember" class="checkbox">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Lembrar senha
+                    </label>
+                </div></>
+                <div align="center"><button class="btn btn-lg btn-primary btn-block btn-signin" value="login" type="submit" name="submit">Entrar</button></div>
+            </form><!-- /form -->
+        	<div id="form_errors" class="alert alert-danger fade in" style="display:none">
+	        	<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+	        	<span class="sr-only">Error:</span>
+	        	<?php echo $error; ?>
+	        </div>
+			<div align="center">
+			<a href="criar"><p>Ainda não está cadastrado? Cadastre-se já.<a/></p></div>
+        </div>
+        <div align="center">&copy; Guilherme Isler & Murilo Godói</div>
+    </div>
+    
+</body>
+</html>
